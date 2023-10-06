@@ -1,18 +1,17 @@
-const fs = require("fs")
-const sudoku = fs.readFileSync("./puzzles.txt", "utf-8")
-
-
-
+const fs = require("fs");
+const sudoku = fs.readFileSync("./puzzles.txt", "utf-8");
+const { EOL } = require("os");
 
 function read() {
-  return sudoku
-  
+  let arr = [];
+
+  return [sudoku];
+
   /**
    * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
    */
 }
-
-console.log(read())
+console.log(read());
 
 function solve() {
   /**
