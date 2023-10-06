@@ -1,4 +1,12 @@
+
+const fs = require("fs")
+const sudoku = fs.readFileSync("./puzzles.txt", "utf-8")
+console.log(sudoku);
+
+
+
 function read() {
+  
   /**
    * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
    */
