@@ -13,12 +13,20 @@ function read() {
 }
 
 function solve() {
+  const sud1 = read();
+  let sud = sud1[];
+  let res = [];
+  for (let i = 0; i < sud.length / 9; i++) {
+    res.push(sud.slice(i * 9, i * 9 + 9));
+  }
+
+  return res;
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции read.
    * Возвращает игровое поле после попытки его решить.
    */
 }
-
+console.table(solve());
 function isSolved() {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
