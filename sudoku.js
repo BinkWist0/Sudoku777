@@ -14,12 +14,18 @@ function read() {
 
 function solve() {
   const sud1 = read();
-  let sud = sud1[];
+  let sud = sud1[0];
   let res = [];
-  for (let i = 0; i < sud.length / 9; i++) {
-    res.push(sud.slice(i * 9, i * 9 + 9));
+  for (let n = 0; n < sud.length / 9; n++) {
+    res.push(sud.slice(n * 9, n * 9 + 9));
   }
-
+  for (let i = 0; i < res.length; i++) {
+    for (let j = 0; j < res[i].length; j++) {
+      if (res[i][j] === "-") {
+        res[i][j] = "X";
+      }
+    }
+  }
   return res;
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции read.
